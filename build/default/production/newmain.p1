@@ -19,18 +19,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S36 . . ]
 "984
 [v _TRISBbits `VS36 ~T0 @X0 0 e@134 ]
-"232
-[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S8 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"231
-[u S7 `S8 1 ]
-[n S7 . . ]
-"243
-[v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
-[v F599 `(v ~T0 @X0 1 tf1`ul ]
-"153 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic.h
-[v __delay `JF599 ~T0 @X0 0 e ]
-[p i __delay ]
+"905
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"6 leds.h
+[v _button_pressed `(i ~T0 @X0 0 ef ]
+"4
+[v _running_leds_forward `(v ~T0 @X0 0 ef ]
+"5
+[v _blinking_leds `(v ~T0 @X0 0 ef ]
 "13 newmain.c
 [p x FOSC=INTOSCCLK ]
 "14
@@ -614,105 +610,96 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 193: extern __bank0 unsigned char __resetbits;
 [; ;pic.h: 194: extern __bank0 __bit __powerdown;
 [; ;pic.h: 195: extern __bank0 __bit __timeout;
+[; ;leds.h: 4: void running_leds_forward();
+[; ;leds.h: 5: void blinking_leds();
+[; ;leds.h: 6: int button_pressed();
 [v $root$_main `(v ~T0 @X0 0 e ]
-"29 newmain.c
+"30 newmain.c
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;newmain.c: 29: void main(void) {
+[; ;newmain.c: 30: void main(void) {
 [e :U _main ]
 [f ]
-[; ;newmain.c: 31: CMCONbits.CM = 0b111;
 "31
-[e = . . _CMCONbits 0 0 -> -> 7 `i `uc ]
-[; ;newmain.c: 32: TRISBbits.TRISB0 = 0;
+[v _blink `i ~T0 @X0 1 a ]
+[; ;newmain.c: 31: int blink=0;
+[e = _blink -> 0 `i ]
+[; ;newmain.c: 32: CMCONbits.CM = 0b111;
 "32
-[e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
-[; ;newmain.c: 33: TRISBbits.TRISB1 = 0;
+[e = . . _CMCONbits 0 0 -> -> 7 `i `uc ]
+[; ;newmain.c: 33: TRISBbits.TRISB0 = 0;
 "33
-[e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
-[; ;newmain.c: 34: TRISBbits.TRISB2 = 0;
+[e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
+[; ;newmain.c: 34: TRISBbits.TRISB1 = 0;
 "34
-[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
-[; ;newmain.c: 35: TRISBbits.TRISB3 = 0;
+[e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
+[; ;newmain.c: 35: TRISBbits.TRISB2 = 0;
 "35
-[e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
-[; ;newmain.c: 36: TRISBbits.TRISB4 = 0;
+[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
+[; ;newmain.c: 36: TRISBbits.TRISB3 = 0;
 "36
-[e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
-[; ;newmain.c: 37: TRISBbits.TRISB5 = 0;
+[e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
+[; ;newmain.c: 37: TRISBbits.TRISB4 = 0;
 "37
+[e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
+[; ;newmain.c: 38: TRISBbits.TRISB5 = 0;
+"38
 [e = . . _TRISBbits 0 5 -> -> 0 `i `uc ]
-[; ;newmain.c: 39: while(1)
+[; ;newmain.c: 39: TRISA=0x1F;
 "39
+[e = _TRISA -> -> 31 `i `uc ]
+[; ;newmain.c: 41: while(1)
+"41
 [e :U 53 ]
-[; ;newmain.c: 40: {
-"40
-{
-[; ;newmain.c: 42: PORTBbits.RB0=1;
+[; ;newmain.c: 42: {
 "42
-[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
-[; ;newmain.c: 43: PORTBbits.RB5=0;
-"43
-[e = . . _PORTBbits 0 5 -> -> 0 `i `uc ]
-[; ;newmain.c: 44: _delay((unsigned long)((1000)*(4000000/4000.0)));
-"44
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;newmain.c: 45: PORTBbits.RB1=1;
+{
+[; ;newmain.c: 45: if (button_pressed()){
 "45
-[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
-[; ;newmain.c: 46: PORTBbits.RB0=0;
+[e $ ! != ( _button_pressed ..  -> 0 `i 55  ]
+{
+[; ;newmain.c: 46: blink=1;
 "46
-[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-[; ;newmain.c: 48: _delay((unsigned long)((1000)*(4000000/4000.0)));
-"48
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;newmain.c: 49: PORTBbits.RB2=1;
-"49
-[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
-[; ;newmain.c: 50: PORTBbits.RB1=0;
+[e = _blink -> 1 `i ]
+"47
+}
+[e :U 55 ]
+[; ;newmain.c: 47: }
+[; ;newmain.c: 50: if(blink!=0)
 "50
-[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-[; ;newmain.c: 51: _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e $ ! != _blink -> 0 `i 56  ]
+[; ;newmain.c: 51: {
 "51
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;newmain.c: 52: PORTBbits.RB2=0;
+{
+[; ;newmain.c: 52: running_leds_forward();
 "52
-[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
-[; ;newmain.c: 53: PORTBbits.RB3=1;
+[e ( _running_leds_forward ..  ]
 "53
-[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
-[; ;newmain.c: 54: _delay((unsigned long)((1000)*(4000000/4000.0)));
+}
+[; ;newmain.c: 53: }
+[e $U 57  ]
 "54
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;newmain.c: 55: PORTBbits.RB3=0;
+[e :U 56 ]
+[; ;newmain.c: 54: else {
+{
+[; ;newmain.c: 55: blinking_leds();
 "55
-[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
-[; ;newmain.c: 56: PORTBbits.RB4=1;
+[e ( _blinking_leds ..  ]
 "56
-[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
-[; ;newmain.c: 57: _delay((unsigned long)((1000)*(4000000/4000.0)));
+}
+[e :U 57 ]
 "57
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;newmain.c: 58: PORTBbits.RB4=0;
-"58
-[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
-[; ;newmain.c: 59: PORTBbits.RB5=1;
-"59
-[e = . . _PORTBbits 0 5 -> -> 1 `i `uc ]
-[; ;newmain.c: 60: _delay((unsigned long)((1000)*(4000000/4000.0)));
-"60
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"61
 }
 [e :U 52 ]
-"39
+"41
 [e $U 53  ]
 [e :U 54 ]
-[; ;newmain.c: 61: }
-[; ;newmain.c: 64: return;
-"64
+[; ;newmain.c: 56: }
+[; ;newmain.c: 57: }
+[; ;newmain.c: 60: return;
+"60
 [e $UE 51  ]
-[; ;newmain.c: 65: }
-"65
+[; ;newmain.c: 61: }
+"61
 [e :UE 51 ]
 }

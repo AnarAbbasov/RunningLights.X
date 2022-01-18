@@ -11,13 +11,16 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$dist/default/production\RunningLights.X.production.obj
-cinit CODE 0 7FE 7FE 2 2
-maintext CODE 0 78B 78B 73 2
-cstackCOMMON COMMON 1 70 70 3 1
-$C:\Users\USER1~1\AppData\Local\Temp\sam0.obj
+$C:\Users\USER1~1\AppData\Local\Temp\s4kk.obj
 end_init CODE 0 0 0 1 2
 config CONFIG 0 2007 2007 1 2
+$dist/default/production\RunningLights.X.production.obj
+cinit CODE 0 7FE 7FE 2 2
+text1 CODE 0 797 797 67 2
+text2 CODE 0 72E 72E C 2
+text3 CODE 0 75B 75B 3C 2
+maintext CODE 0 73A 73A 21 2
+cstackCOMMON COMMON 1 70 70 5 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -30,19 +33,19 @@ RAM 120-14F 1
 BANK0 20-6F 1
 BANK1 A0-EF 1
 BANK2 120-14F 1
-CONST 1-78A 2
-ENTRY 1-78A 2
+CONST 1-72D 2
+ENTRY 1-72D 2
 IDLOC 2000-2003 2
 STACK 20-6F 1
-CODE 1-78A 2
+CODE 1-72D 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
 SFR3 180-1EF 1
-COMMON 73-7D 1
+COMMON 75-7D 1
 EEDATA 2100-217F 2
-STRCODE 1-78A 2
-STRING 1-78A 2
+STRCODE 1-72D 2
+STRING 1-72D 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -57,38 +60,67 @@ STRING 1-78A 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\RunningLights.X.production.obj
-7FE cinit CODE >127:C:\Users\USER1~1\AppData\Local\Temp\sam0.
-7FE cinit CODE >130:C:\Users\USER1~1\AppData\Local\Temp\sam0.
-7FE cinit CODE >136:C:\Users\USER1~1\AppData\Local\Temp\sam0.
-7FE cinit CODE >138:C:\Users\USER1~1\AppData\Local\Temp\sam0.
-7FF cinit CODE >139:C:\Users\USER1~1\AppData\Local\Temp\sam0.
-78B maintext CODE >29:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-78B maintext CODE >31:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-78F maintext CODE >32:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-792 maintext CODE >33:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-793 maintext CODE >34:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-794 maintext CODE >35:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-795 maintext CODE >36:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-796 maintext CODE >37:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-797 maintext CODE >42:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-79A maintext CODE >43:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-79B maintext CODE >44:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7A8 maintext CODE >45:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7AB maintext CODE >46:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7AC maintext CODE >48:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7B9 maintext CODE >49:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7BC maintext CODE >50:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7BD maintext CODE >51:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7CA maintext CODE >52:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7CD maintext CODE >53:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7CE maintext CODE >54:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7DB maintext CODE >55:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7DE maintext CODE >56:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7DF maintext CODE >57:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7EC maintext CODE >58:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7EF maintext CODE >59:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7F0 maintext CODE >60:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
-7FD maintext CODE >39:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+7FE cinit CODE >208:C:\Users\USER1~1\AppData\Local\Temp\s4kk.
+7FE cinit CODE >211:C:\Users\USER1~1\AppData\Local\Temp\s4kk.
+7FE cinit CODE >217:C:\Users\USER1~1\AppData\Local\Temp\s4kk.
+7FE cinit CODE >219:C:\Users\USER1~1\AppData\Local\Temp\s4kk.
+7FF cinit CODE >220:C:\Users\USER1~1\AppData\Local\Temp\s4kk.
+75B text3 CODE >31:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+75B text3 CODE >33:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+75E text3 CODE >34:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+75F text3 CODE >35:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+760 text3 CODE >36:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+76D text3 CODE >37:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+770 text3 CODE >38:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+771 text3 CODE >39:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+772 text3 CODE >40:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+77F text3 CODE >41:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+782 text3 CODE >42:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+783 text3 CODE >43:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+784 text3 CODE >44:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+791 text3 CODE >45:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+794 text3 CODE >46:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+795 text3 CODE >47:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+72E text2 CODE >53:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+72E text2 CODE >55:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+732 text2 CODE >57:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+737 text2 CODE >60:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+797 text1 CODE >6:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+797 text1 CODE >8:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+79A text1 CODE >9:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+79B text1 CODE >10:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+7A8 text1 CODE >11:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+7AB text1 CODE >12:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+7AC text1 CODE >14:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+7B9 text1 CODE >15:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+7BC text1 CODE >16:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+7BD text1 CODE >17:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+7CA text1 CODE >18:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+7CD text1 CODE >19:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+7CE text1 CODE >20:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+7DB text1 CODE >21:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+7DE text1 CODE >22:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+7DF text1 CODE >23:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+7EC text1 CODE >24:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+7EF text1 CODE >25:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+7F0 text1 CODE >26:C:\Users\User 1\MPLABXProjects\RunningLights.X\led_functions.c
+73A maintext CODE >30:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+73A maintext CODE >31:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+73C maintext CODE >32:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+740 maintext CODE >33:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+743 maintext CODE >34:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+744 maintext CODE >35:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+745 maintext CODE >36:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+746 maintext CODE >37:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+747 maintext CODE >38:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+748 maintext CODE >39:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+74A maintext CODE >45:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+74F maintext CODE >46:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+753 maintext CODE >50:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+757 maintext CODE >52:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+758 maintext CODE >53:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+759 maintext CODE >55:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
+75A maintext CODE >41:C:\Users\User 1\MPLABXProjects\RunningLights.X\newmain.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -103,33 +135,39 @@ $dist/default/production\RunningLights.X.production.obj
 %SYMTAB
 ___latbits 0 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
 __Hspace_0 2008 0 ABS 0 - -
-__Hspace_1 73 0 ABS 0 - -
+__Hspace_1 75 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\USER1~1\AppData\Local\Temp\sam0.obj
-_main F16 0 CODE 0 maintext dist/default/production\RunningLights.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\USER1~1\AppData\Local\Temp\s4kk.obj
+_main E74 0 CODE 0 maintext dist/default/production\RunningLights.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
-start 0 0 CODE 0 init C:\Users\USER1~1\AppData\Local\Temp\sam0.obj
+start 0 0 CODE 0 init C:\Users\USER1~1\AppData\Local\Temp\s4kk.obj
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
+__end_of_button_pressed E74 0 CODE 0 text2 dist/default/production\RunningLights.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\USER1~1\AppData\Local\Temp\sam0.obj
-intlevel1 0 0 ENTRY 0 functab C:\Users\USER1~1\AppData\Local\Temp\sam0.obj
-intlevel2 0 0 ENTRY 0 functab C:\Users\USER1~1\AppData\Local\Temp\sam0.obj
-intlevel3 0 0 ENTRY 0 functab C:\Users\USER1~1\AppData\Local\Temp\sam0.obj
-intlevel4 0 0 ENTRY 0 functab C:\Users\USER1~1\AppData\Local\Temp\sam0.obj
-intlevel5 0 0 ENTRY 0 functab C:\Users\USER1~1\AppData\Local\Temp\sam0.obj
+?_button_pressed 70 0 COMMON 1 cstackCOMMON dist/default/production\RunningLights.X.production.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\USER1~1\AppData\Local\Temp\s4kk.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\USER1~1\AppData\Local\Temp\s4kk.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\USER1~1\AppData\Local\Temp\s4kk.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\USER1~1\AppData\Local\Temp\s4kk.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\USER1~1\AppData\Local\Temp\s4kk.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\USER1~1\AppData\Local\Temp\s4kk.obj
+_blinking_leds EB6 0 CODE 0 text3 dist/default/production\RunningLights.X.production.obj
+__size_of_running_leds_forward 0 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
 _CMCONbits 1F 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
+__end_of_running_leds_forward FFC 0 CODE 0 text1 dist/default/production\RunningLights.X.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
 __CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
 start_initialization FFC 0 CODE 0 cinit dist/default/production\RunningLights.X.production.obj
 _TRISBbits 86 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\USER1~1\AppData\Local\Temp\sam0.obj
+__size_of_blinking_leds 0 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\USER1~1\AppData\Local\Temp\s4kk.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -137,6 +175,7 @@ __Hbank3 0 0 BANK3 1 bank3 -
 __Hcinit 1000 0 CODE 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
 __Hstack 0 0 STACK 2 stack -
+__end_of_blinking_leds F2E 0 CODE 0 text3 dist/default/production\RunningLights.X.production.obj
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4010 0 CONFIG 0 config -
@@ -147,6 +186,7 @@ __Lbank3 0 0 BANK3 1 bank3 -
 __Lcinit FFC 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
 __Lstack 0 0 STACK 2 stack -
+_PORTAbits 5 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
 _PORTBbits 6 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
@@ -166,18 +206,21 @@ __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __S0 2008 0 ABS 0 - -
-__S1 73 0 ABS 0 - -
+__S1 75 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
+__size_of_button_pressed 0 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\USER1~1\AppData\Local\Temp\sam0.obj
-__pmaintext F16 0 CODE 0 maintext dist/default/production\RunningLights.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\USER1~1\AppData\Local\Temp\s4kk.obj
+_running_leds_forward F2E 0 CODE 0 text1 dist/default/production\RunningLights.X.production.obj
+__pmaintext E74 0 CODE 0 maintext dist/default/production\RunningLights.X.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
-stackhi 0 0 ABS 0 - C:\Users\USER1~1\AppData\Local\Temp\sam0.obj
-stacklo 0 0 ABS 0 - C:\Users\USER1~1\AppData\Local\Temp\sam0.obj
+main@blink 73 0 COMMON 1 cstackCOMMON dist/default/production\RunningLights.X.production.obj
+stackhi 0 0 ABS 0 - C:\Users\USER1~1\AppData\Local\Temp\s4kk.obj
+stacklo 0 0 ABS 0 - C:\Users\USER1~1\AppData\Local\Temp\s4kk.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
@@ -190,6 +233,9 @@ end_of_initialization FFC 0 CODE 0 cinit dist/default/production\RunningLights.X
 __Hintentry 0 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 0 0 CODE 0 reset_vec -
+__ptext1 F2E 0 CODE 0 text1 dist/default/production\RunningLights.X.production.obj
+__ptext2 E5C 0 CODE 0 text2 dist/default/production\RunningLights.X.production.obj
+__ptext3 EB6 0 CODE 0 text3 dist/default/production\RunningLights.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -198,12 +244,14 @@ __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\RunningLights.X.production.obj
 __Hend_init 2 0 CODE 0 end_init -
-__end_of_main FFC 0 CODE 0 maintext dist/default/production\RunningLights.X.production.obj
+__end_of_main EB6 0 CODE 0 maintext dist/default/production\RunningLights.X.production.obj
+_TRISA 85 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
 __initialization FFC 0 CODE 0 cinit dist/default/production\RunningLights.X.production.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\RunningLights.X.production.obj
+_button_pressed E5C 0 CODE 0 text2 dist/default/production\RunningLights.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -230,7 +278,10 @@ __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\RunningLights.X.production.o
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7FE FFC 2 2
-maintext 0 78B F16 73 2
-cstackCOMMON 1 70 70 3 1
+text1 0 797 F2E 67 2
+text2 0 72E E5C C 2
+text3 0 75B EB6 3C 2
+maintext 0 73A E74 21 2
+cstackCOMMON 1 70 70 5 1
 reset_vec 0 0 0 1 2
 config 0 2007 400E 1 2

@@ -25,9 +25,10 @@
 // Use project enums instead of #define for ON and OFF.
 
 #include <xc.h>
+#include "leds.h"
 
 void main(void) {
-   
+    int blink=0;
     CMCONbits.CM = 0b111;
      TRISBbits.TRISB0 = 0;
      TRISBbits.TRISB1 = 0;
@@ -35,29 +36,24 @@ void main(void) {
      TRISBbits.TRISB3 = 0;
      TRISBbits.TRISB4 = 0;
      TRISBbits.TRISB5 = 0;
+     TRISA=0x1F;
   
     while(1)
     {
        /**/
-      PORTBbits.RB0=1;
-      PORTBbits.RB5=0;
-      __delay_ms(1000);
-      PORTBbits.RB1=1;
-      PORTBbits.RB0=0;
-            
-      __delay_ms(1000);
-      PORTBbits.RB2=1;
-      PORTBbits.RB1=0;
-      __delay_ms(1000);
-      PORTBbits.RB2=0;
-      PORTBbits.RB3=1;
-      __delay_ms(1000);
-          PORTBbits.RB3=0;
-           PORTBbits.RB4=1;
-           __delay_ms(1000);
-          PORTBbits.RB4=0;
-           PORTBbits.RB5=1;
-           __delay_ms(1000);
+        
+        if (button_pressed()){
+            blink=1;
+        }
+                
+                
+        if(blink!=0)
+        {
+      running_leds_forward();
+        }
+        else {
+      blinking_leds();
+        }
     }
     
     

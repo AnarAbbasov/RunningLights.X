@@ -846,9 +846,14 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 
-# 29 "newmain.c"
-void main(void) {
+# 4 "leds.h"
+void running_leds_forward();
+void blinking_leds();
+int button_pressed();
 
+# 30 "newmain.c"
+void main(void) {
+int blink=0;
 CMCONbits.CM = 0b111;
 TRISBbits.TRISB0 = 0;
 TRISBbits.TRISB1 = 0;
@@ -856,29 +861,24 @@ TRISBbits.TRISB2 = 0;
 TRISBbits.TRISB3 = 0;
 TRISBbits.TRISB4 = 0;
 TRISBbits.TRISB5 = 0;
+TRISA=0x1F;
 
 while(1)
 {
 
-PORTBbits.RB0=1;
-PORTBbits.RB5=0;
-_delay((unsigned long)((1000)*(4000000/4000.0)));
-PORTBbits.RB1=1;
-PORTBbits.RB0=0;
 
-_delay((unsigned long)((1000)*(4000000/4000.0)));
-PORTBbits.RB2=1;
-PORTBbits.RB1=0;
-_delay((unsigned long)((1000)*(4000000/4000.0)));
-PORTBbits.RB2=0;
-PORTBbits.RB3=1;
-_delay((unsigned long)((1000)*(4000000/4000.0)));
-PORTBbits.RB3=0;
-PORTBbits.RB4=1;
-_delay((unsigned long)((1000)*(4000000/4000.0)));
-PORTBbits.RB4=0;
-PORTBbits.RB5=1;
-_delay((unsigned long)((1000)*(4000000/4000.0)));
+if (button_pressed()){
+blink=1;
+}
+
+
+if(blink!=0)
+{
+running_leds_forward();
+}
+else {
+blinking_leds();
+}
 }
 
 
